@@ -15,12 +15,12 @@ router.use('/api', createProxyMiddleware({
         changeOrigin:true
 }))
 
-//
+// http://localhost:5050/
 router.get('/', (req, res) => {
     res.render('index', {message :"Hello from handlebars"})
     //res.send('hit the main route');
 })
-
+// http://localhost:5050/portfolio
 router.get('/portfolio', (req, res) => {
     res.render('artwork', { portmessage:"you are on portfolio page"})
 })
