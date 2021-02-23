@@ -11,7 +11,7 @@ const port = process.env.PORT || 5050;
 //tell express to watch views folder
 app.set('views', path.join(__dirname, 'views'));
 //handke bar
-app.set('views engine', 'hbs' );
+app.set('view engine', 'hbs' );
 
 //look public directory
 app.set(express.static(path.join(__dirname, 'public')));
