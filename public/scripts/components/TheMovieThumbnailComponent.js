@@ -3,8 +3,7 @@ export default {
 
     props: ["movie"],
 
-    template: 
-    `
+    template:`
     <div>
         <img :src='"images/" + movie.movies_cover' alt="movie thumb">
     </div>

@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs' );
 
 //look public directory
-app.set(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // '/' will redirect to './routes/index'
 app.use('/', require('./routes/index'));
