@@ -21,9 +21,13 @@ router.get('/', (req, res) => {
     //res.send('hit the main route');
 })
 
-// http://localhost:5050/portfolio
-// router.get('/portfolio', (req, res) => {
-//     res.render('artwork', { portmessage:"you are on portfolio page"})
-// })
+//other routes you might use put here
+
+//handle 404 error 
+router.use((req, res) => {
+    res.status(404);
+    res.render("error", {
+        layout:"errorLayout.hbs", errormessage: `You have lost your way, "${req.url}" does not exist`});
+})
 
 module.exports = router;
