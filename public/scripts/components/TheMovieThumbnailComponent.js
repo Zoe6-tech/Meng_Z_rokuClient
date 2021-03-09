@@ -12,7 +12,7 @@ export default {
     methods:{
         loadPlayer(){
             debugger;
-            console.log("You hit a image");
+            console.log("You hit an image");
         }
     }
 }
