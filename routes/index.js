@@ -15,6 +15,16 @@ router.use('/api', createProxyMiddleware({
         changeOrigin:true
 }))
 
+//user management system
+router.use('/ums', createProxyMiddleware({
+    target : 'http://localhost:5000',
+    header:{
+        accept:'application/json, application/x-www-form-urlencoded'
+    },
+    changeOrigin:true
+}))
+
+
 // http://localhost:5050/
 router.get('/', (req, res) => {
     res.render('index', {message :"Hello from handlebars"})
