@@ -17,7 +17,7 @@ export default {
 
 	created: function() {
         // get all users fron DB
-        fetch(`/ums/admin/getusers`)
+        fetch(`/ums/admin/getusers`)//received data
             .then(res => res.json())
             .then(data =>this.userList = data)
         .catch(err => console.error(err));
