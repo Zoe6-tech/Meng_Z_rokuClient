@@ -12,26 +12,28 @@ const router = new VueRouter({
 (() => {
     const vm = new Vue({
         data: {
-            allMovies: []
+            authenticated:false,
+            isAdmin:false
         },
 
         created: function(){
-            // fetch('/api/movies') // http://localhost:5050/api/movies
-            // .then(res => res.json())
-            // .then(data => {
-            //     //show the data in table form
-            //     console.table(data);
-            //     this.allMovies = data;
-            // })
-            // .catch(err => console.error(err));
+
         },
 
         methods: {
+            logout(){
+                //remove the cached user from localstorage, if it exists
+                if(localStorage.getItem('cacheduser')){
+                    localStorage.removeItem('cacheduser');
+                }
+                
+                this.$router.push({ name:"root"});//user click logout, then back to logincomponents
+            }
 
         },
       
         components:{
-            // moviethumb :TheMovieThumb
+            
         },
 
         router
