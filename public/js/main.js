@@ -4,8 +4,8 @@ import AllUsers from './components/TheAllUsersComponent.js';
 
 const router = new VueRouter({
     routes:[
-        { path : '/', name: 'root', component: LoginComponent },
-        { path : '/users', name: 'users', component: AllUsers }
+        { path : '/', name: 'root', component: LoginComponent },//first to /, and login component
+        { path : '/users', name: 'users', component: AllUsers }//after login in success, go user components
     ]
 });
 
